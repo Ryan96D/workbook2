@@ -3,9 +3,10 @@ public class Main {
         System.out.println(); // skip line;
 
         Pokemon p1 = new Pokemon("Bulbasaur","Grass",1,true);
-        p1.level = 12;
-        p1.attack = "Vine Whip";
-        p1.effective = true;
+        p1.setLevel(12);
+        p1.setAttack("Vine Whip");
+        p1.setEffective(true);
+
 
 
         p1.caught();
@@ -23,8 +24,8 @@ public class Main {
 
 
         Pokemon p2 = new Pokemon("Eevee","Normal",133,true);
-        p2.level = 15;
-        p2.attack = "Tackle";
+        p2.setLevel(15);
+        p2.setAttack("Tackle");
 
 
         p2.caught();
@@ -42,9 +43,9 @@ public class Main {
 
 
         Pokemon p3 = new Pokemon("Pikachu","Electric",25,true);
-        p3.level = 24;
-        p3.attack = "Thunderbolt";
-        p3.effective = true;
+        p3.setLevel(24);
+        p3.setAttack("Thunderbolt");
+        p3.setEffective(true);
 
 
         p3.caught();
@@ -62,10 +63,10 @@ public class Main {
 
 
         Pokemon p4 = new Pokemon("Mewtwo","Psychic",150,false);
-        p4.level = 100;
-        p4.attack = "Shadow Ball";
-        p4.legendary = "Legendary ";
-        p4.effective = true;
+        p4.setLevel(100);
+        p4.setAttack("Shadow Ball");
+        p4.setLegendary("Legendary ");
+        p4.setEffective(true);
 
 
         p4.caught();
@@ -82,9 +83,9 @@ public class Main {
 
 
         Pokemon p5 = new Pokemon("Charizard","Fire and Flying",6,true);
-        p5.level = 50;
-        p5.attack = "Flamethrower";
-        p5.effective = true;
+        p5.setLevel(12);
+        p5.setAttack("Flamethrower");
+        p5.setEffective(true);
 
         p5.caught();
         delay(3000);
@@ -101,10 +102,9 @@ public class Main {
 
 
         Pokemon p6 = new Pokemon("Magikarp","Water",129,true);
-        p6.level = 5;
-        p6.attack = "Splash";
-        p6.effective = false;
-
+        p6.setLevel(5);
+        p6.setAttack("Splash");
+        p6.setEffective(false);
         p6.caught();
         delay(3000);
         System.out.println();

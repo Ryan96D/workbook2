@@ -1,19 +1,50 @@
 public class Pokemon {
 
-    String name; // the "this" in the Constructor refers to this variable
-    String type;
-    int level;
-    int dexNum;
-    String formattedDexNum;
-    boolean evolutionLine;
-    String attack;
-    String legendary;
-    Boolean effective; //capital B Boolean can be null, lowercase boolean defaults to false
+    private String name; // the "this" in the Constructor refers to this variable
+    private String type;
+    private int getLevel;
+    private int dexNum;
+    private String formattedDexNum;
+    private boolean evolutionLine;
+    private String setAttack;
+    private String legendary;
+    private Boolean effective; //capital B Boolean can be null, lowercase boolean defaults to false
 
 
+    public int getLevel() {
+        return getLevel;
+    }
+
+    public void setLevel(int level) {
+        this.getLevel = level;
+    }
+
+    public String getAttack() {
+        return setAttack;
+    }
 
 
-    Pokemon(String name,String type, int dexNum, boolean evolutionLine){
+    public void setAttack(String attack) {
+        this.setAttack = attack;
+    }
+
+    public Boolean getEffective() {
+        return effective;
+    }
+
+    public void setEffective(Boolean effective) {
+        this.effective = effective;
+    }
+
+    public String getLegendary() {
+        return legendary;
+    }
+
+    public void setLegendary(String legendary) {
+        this.legendary = legendary;
+    }
+
+    Pokemon(String name, String type, int dexNum, boolean evolutionLine){
         this.name = name; //"this" refers to the class variable, the "name" on the right side of the "=" is the Constructor variable
         this.type = type;
         this.dexNum = dexNum;
@@ -23,7 +54,7 @@ public class Pokemon {
 
 
     void caught() {
-        System.out.println("\u001B[32m෴෴෴\u001B[0m You caught a level "+level+" "+name+" in the grass! \u001B[32m෴෴෴\u001B[0m");
+        System.out.println("\u001B[32m෴෴෴\u001B[0m You caught a level "+ getLevel +" "+name+" in the grass! \u001B[32m෴෴෴\u001B[0m");
         System.out.println("It has been registered as number "+formattedDexNum+" in the Pokedex");
     }
 
@@ -36,12 +67,12 @@ public class Pokemon {
         System.out.println("\uD83D\uDFE5▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\uD83D\uDFE5");
         if (evolutionLine){ // by default, executes the if statement if true
             System.out.println(name + " is a " +type+ " type and is part of an evolution line.");
-            System.out.println("It knows " + "\"" + attack + "\"");
+            System.out.println("It knows " + "\"" + setAttack + "\"");
             System.out.println("\uD83D\uDFE5▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\uD83D\uDFE5");
 
         }else {
             System.out.println(name+" is a "+legendary+type+" type and is not part of an evolution line.");
-            System.out.println("It knows "+"\""+attack+"\"");
+            System.out.println("It knows "+"\""+ setAttack +"\"");
             System.out.println("\uD83D\uDFE5▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\uD83D\uDFE5");
         }
     }
@@ -49,8 +80,8 @@ public class Pokemon {
      void attacks(){
          System.out.println("You command "+name+" to attack!");
          delay(1000);
-         System.out.println("Level "+level+" "+name+" attacks!" );
-         System.out.println("\uD83D\uDCA5It uses "+attack+"!\uD83D\uDCA5");
+         System.out.println("Level "+ getLevel +" "+name+" attacks!" );
+         System.out.println("\uD83D\uDCA5It uses "+ setAttack +"!\uD83D\uDCA5");
     }
 
     void effectiveness(){

@@ -1,10 +1,10 @@
 public class CellPhone {
 
-    int serial;
-    String model;
-    String carrier;
-    String phoneNumber;
-    String ownerName;
+    private int serial;
+    private String model;
+    private String carrier;
+    private String phoneNumber;
+    private String ownerName;
 
     CellPhone (){
         serial = 0;
