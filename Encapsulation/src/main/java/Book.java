@@ -3,6 +3,23 @@ public class Book {
     private String color;
     private int pages;
     boolean isFiction;
+    String author;
+
+    Book (String title,String color, int pages, String author, boolean isFiction){
+        this.title = title;
+        this.color = color;
+        this.pages = pages;
+        this.author = author;
+        this.isFiction = isFiction;
+    }
+
+    Book (){
+        this.title = "Untitled";
+        this.color = "uncolored";
+        this.pages = 0;
+        this.author = "Unknown";
+        this.isFiction = false;
+    }
 
     public String getTitle() {
         return title;
@@ -34,6 +51,13 @@ public class Book {
         }
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
     public void setFiction(boolean fiction) {
         isFiction = fiction;
@@ -47,7 +71,35 @@ public class Book {
         }
     }
 
+    public void describe() {
+        System.out.println("While browsing the library's shelves, a particular "+color+
+                "book catches your eye. \nThe title reads: \""+title + "\". \n" +
+                "You open the book, and scroll through it's contents... ");
+
+    }
+
     public void read(){
         System.out.println("The book contains "+pages+" pages inside it...");
+        System.out.println("The book was written by "+author);
+
+    }
+
+
+    public void describe(String extrainfo) {
+        System.out.println(extrainfo);
+
+    }
+    public void describe(int currentPage){
+        System.out.println("You open the book to page "+currentPage);
+    }
+
+    public void describe(int currentPage, String location){
+        System.out.println("You open the book to page "+currentPage+" and start reading it " +
+                "at "+location);
+    }
+    public int describe1(int pages){ //return int instead of void method
+        this.pages = pages;
+        return pages*2;
+
     }
 }
