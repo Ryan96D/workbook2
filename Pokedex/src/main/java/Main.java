@@ -83,7 +83,7 @@ public class Main {
 
 
         Pokemon p5 = new Pokemon("Charizard","Fire and Flying",6,true);
-        p5.setLevel(12);
+        p5.setLevel(50);
         p5.setAttack("Flamethrower");
         p5.setEffective(true);
 
